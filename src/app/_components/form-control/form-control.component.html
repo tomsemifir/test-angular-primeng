@@ -1,0 +1,33 @@
+<h3>Premier Formulaire</h3>
+<form [formGroup]="userProfile" (ngSubmit)="envoyerAuSecond()">
+    <label>Nom : 
+        <input type="text" formControlName="nom">
+    </label>
+
+    <label>Prénom : 
+        <input type="text" formControlName="prenom">
+    </label>
+
+    <label>Age : 
+        <input type="number" formControlName="age">
+    </label>
+
+    <button type="submit">Envoyer au second</button>
+</form>
+
+<h3>Second Formulaire</h3>
+<form [formGroup]="newUserProfile" (ngSubmit)="inscription()">
+    <label>Nom : 
+        <input type="text" formControlName="nom">
+    </label>
+
+    <label>Prénom : 
+        <input type="text" formControlName="prenom">
+    </label>
+
+    <label>Age : 
+        <input type="number" formControlName="age">
+    </label>
+
+    <button type="submit">S'inscrire</button>
+</form>

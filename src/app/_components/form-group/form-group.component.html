@@ -1,0 +1,37 @@
+
+<form [formGroup]="userProfile" (ngSubmit)="inscription()">
+
+    <h3>Identité</h3>
+
+    <label>Nom : 
+        <input type="text" formControlName="nom">
+    </label>
+
+    <label>Prénom : 
+        <input type="text" formControlName="prenom">
+    </label>
+
+    <label>Age : 
+        <input type="number" formControlName="age">
+    </label>
+
+    <h3>Adresse</h3>
+
+    <div formGroupName="adresse">
+
+        <label>Numéro : 
+            <input type="number" formControlName="numero">
+        </label>
+
+        <label>Rue : 
+            <input type="text" formControlName="rue">
+        </label>
+
+        <label>Ville : 
+            <input type="text" formControlName="ville">
+        </label>
+
+    </div>
+
+    <button type="submit">Envoyer</button>
+</form>

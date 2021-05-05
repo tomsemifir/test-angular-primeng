@@ -1,0 +1,25 @@
+<form [formGroup]="userProfile" (ngSubmit)="inscription()">
+    <h3>Identité</h3>
+    <label>Nom : 
+        <input type="text" formControlName="nom">
+    </label>
+
+    <label>Prénom : 
+        <input type="text" formControlName="prenom">
+    </label>
+
+    <h3>Chats</h3>
+    <div formArrayName="chats">
+        <div *ngFor="let chat of chats.controls; let i = index">
+
+            <label>Chat {{ i + 1 }}: 
+                <input type="text" [formControlName]="i">
+            </label>
+
+        </div>
+
+        <input type="button" (click)="ajouterChat()" value="Ajouter un chat">
+    </div>
+
+    <button type="submit">S'inscrire</button>
+</form>
